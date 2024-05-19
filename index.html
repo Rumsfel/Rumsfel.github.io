@@ -8,6 +8,8 @@
     <!-- Google Fonts: Roboto for headings and Open Sans for body text -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -19,10 +21,32 @@
         }
 
         header {
-            background: linear-gradient(135deg, #6b73ff, #000dff);
+            background: url('https://source.unsplash.com/1600x900/?globe,world') no-repeat center center/cover;
             color: #fff;
-            padding: 20px 0;
+            padding: 60px 0;
             text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         .container {
@@ -100,6 +124,12 @@
 
         .contact-info li {
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
         }
 
         .contact-info a {
@@ -109,6 +139,28 @@
 
         .contact-info a:hover {
             text-decoration: underline;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer i {
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -120,11 +172,17 @@
         <p>Exploring Fascinating Facts Around the Globe</p>
     </header>
 
-    <div class="container">
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#facts">Facts</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container" id="about">
         <h2>About Me</h2>
         <p>Welcome to my world of exploration and discovery! I'm passionate about uncovering the most intriguing facts about our planet and sharing them with you.</p>
 
-        <h2>Did You Know?</h2>
+        <h2 id="facts">Did You Know?</h2>
 
         <div class="topic great-wall">
             <h3>The Great Wall of China</h3>
@@ -151,14 +209,17 @@
             <p>Mount Everest, the highest mountain in the world, stands at 29,029 feet above sea level.</p>
         </div>
 
-        <h2>Contact Me</h2>
+        <h2 id="contact">Contact Me</h2>
         <ul class="contact-info">
-            <li>Email: <a href="mailto:rumsfelddonald1@gmail.com">rumsfelddonald1@gmail.com</a></li>
-            <li>Phone: +254796447965</li>
-            <li>Twitter: <a href="https://twitter.com/FactsAroundGlob" target="_blank">@FactsAroundGlob</a></li>
+            <li><i class="fas fa-envelope"></i><a href="mailto:rumsfelddonald1@gmail.com">rumsfelddonald1@gmail.com</a></li>
+            <li><i class="fas fa-phone"></i>+254796447965</li>
+            <li><i class="fab fa-twitter"></i><a href="https://twitter.com/FactsAroundGlob" target="_blank">@FactsAroundGlob</a></li>
         </ul>
     </div>
 
-</body>
-
-</html>
+    <footer>
+        <p>&copy; 2024 Facts Around Globe. All rights reserved.</p>
+        <p>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://
