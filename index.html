@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facts Around Globe</title>
+    <title>Facts Around the Globe</title>
     <!-- Google Fonts: Roboto for headings and Open Sans for body text -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -117,6 +119,56 @@
             background-color: #1a75ff;
         }
 
+        .topic.victoria-falls {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/56/Victoria_Falls_2009.jpg');
+            background-color: #0066cc;
+        }
+
+        .topic.grand-canyon {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e2/Grand_Canyon_Dusk.jpg');
+            background-color: #993300;
+        }
+
+        .topic.niagara-falls {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8d/Niagara_Falls.jpg');
+            background-color: #0099cc;
+        }
+
+        .topic.machu-picchu {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Machu_Picchu%2C_Peru.jpg');
+            background-color: #669900;
+        }
+
+        .topic.eiffel-tower {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Eiffel_Tower_at_Night.jpg');
+            background-color: #666666;
+        }
+
+        .topic.loch-ness {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/Loch_Ness_Urquhart_Castle.jpg');
+            background-color: #003366;
+        }
+
+        .topic.great-barrier-reef {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/ae/Great_Barrier_Reef-EO.JPG');
+            background-color: #339999;
+        }
+
+        .topic.sydney-opera-house {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f0/Sydney_Opera_House_Sails.jpg');
+            background-color: #999966;
+        }
+
+        .topic.antarctic-ice-sheet {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6d/Antarctic_ice_sheet.jpg');
+            background-color: #0099cc;
+        }
+
+        .topic.emperor-penguins {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fd/Emperor_Penguins_Antarctica.jpg');
+            background-color: #333399;
+        }
+
         .contact-info {
             list-style: none;
             padding: 0;
@@ -162,64 +214,82 @@
                 padding: 10px;
             }
         }
+
+        .toc {
+            margin-bottom: 20px;
+        }
+
+        .toc a {
+            color: #1a0dab;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .newsletter {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .newsletter input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .newsletter button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background-color: #555;
+        }
+
+        /* Styles for the map */
+        #map {
+            height: 400px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
 <body>
-
     <header>
-        <h1>Facts Around Globe</h1>
-        <p>Exploring Fascinating Facts Around the Globe</p>
+        <h1>Facts Around the Globe</h1>
     </header>
 
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#facts">Facts</a>
-        <a href="#contact">Contact</a>
+        <a href="#asia">Asia</a>
+        <a href="#africa">Africa</a>
+        <a href="#europe">Europe</a>
+        <a href="#north-america">North America</a>
+        <a href="#south-america">South America</a>
+        <a href="#australia">Australia</a>
+        <a href="#antarctica">Antarctica</a>
     </nav>
 
-    <div class="container" id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my world of exploration and discovery! I'm passionate about uncovering the most intriguing facts about our planet and sharing them with you.</p>
-
-        <h2 id="facts">Did You Know?</h2>
-
-        <div class="topic great-wall">
-            <h3>The Great Wall of China</h3>
-            <p>The Great Wall of China is over 13,000 miles long and took more than 2,000 years to build.</p>
-        </div>
-
-        <div class="topic lake-baikal">
-            <h3>Lake Baikal</h3>
-            <p>Lake Baikal in Siberia is the deepest lake in the world, reaching depths of over 5,300 feet.</p>
-        </div>
-
-        <div class="topic sahara-desert">
-            <h3>The Sahara Desert</h3>
-            <p>The Sahara Desert expands at about 0.6 miles per year due to desertification.</p>
-        </div>
-
-        <div class="topic amazon-rainforest">
-            <h3>Amazon Rainforest</h3>
-            <p>The Amazon Rainforest produces 20% of the Earth's oxygen and is home to one in ten known species in the world.</p>
-        </div>
-
-        <div class="topic mount-everest">
-            <h3>Mount Everest</h3>
-            <p>Mount Everest, the highest mountain in the world, stands at 29,029 feet above sea level.</p>
-        </div>
-
-        <h2 id="contact">Contact Me</h2>
-        <ul class="contact-info">
-            <li><i class="fas fa-envelope"></i><a href="mailto:rumsfelddonald1@gmail.com">rumsfelddonald1@gmail.com</a></li>
-            <li><i class="fas fa-phone"></i>+254796447965</li>
-            <li><i class="fab fa-twitter"></i><a href="https://twitter.com/FactsAroundGlob" target="_blank">@FactsAroundGlob</a></li>
-        </ul>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Facts Around Globe. All rights reserved.</p>
-        <p>
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://
+    <div class="container">
+        <div class="search
