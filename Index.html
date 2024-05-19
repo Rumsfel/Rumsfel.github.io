@@ -92,6 +92,7 @@
             margin: 0;
         }
 
+        /* Define styles for each topic */
         .topic.great-wall {
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6f/The_Great_Wall_of_China_at_Jinshanling-edit.jpg');
             background-color: #333;
@@ -107,16 +108,9 @@
             background-color: #cc6600;
         }
 
-        .topic.amazon-rainforest {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/94/Amazon_Rainforest.jpg');
-            background-color: #006600;
-        }
+        /* Add more topic styles as needed */
 
-        .topic.mount-everest {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg');
-            background-color: #1a75ff;
-        }
-
+        /* Contact Info */
         .contact-info {
             list-style: none;
             padding: 0;
@@ -140,41 +134,6 @@
         .contact-info a:hover {
             text-decoration: underline;
         }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 20px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        footer i {
-            margin: 0 10px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-        }
-
-        .toc {
-            margin-bottom: 20px;
-        }
-
-        .toc a {
-            color: #1a0dab;
-            text-decoration: none;
-        }
-
-        .toc a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 
@@ -182,70 +141,46 @@
 
     <header>
         <h1>Facts Around Globe</h1>
-        <p>Exploring Fascinating Facts Around the Globe</p>
+        <p>Discover fascinating facts about landmarks and natural wonders around the world</p>
     </header>
 
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#facts">Facts</a>
-        <a href="#contact">Contact</a>
+        <a href="#great-wall">Great Wall of China</a>
+        <a href="#lake-baikal">Lake Baikal</a>
+        <a href="#sahara-desert">Sahara Desert</a>
+        <!-- Add more navigation links as needed -->
     </nav>
 
     <div class="container">
-        <div class="toc">
-            <h2>Table of Contents</h2>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#facts">Did You Know?</a>
-                    <ul>
-                        <li><a href="#great-wall">The Great Wall of China</a></li>
-                        <li><a href="#lake-baikal">Lake Baikal</a></li>
-                        <li><a href="#sahara-desert">The Sahara Desert</a></li>
-                        <li><a href="#amazon-rainforest">Amazon Rainforest</a></li>
-                        <li><a href="#mount-everest">Mount Everest</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
-        </div>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my world of exploration and discovery! I'm passionate about uncovering the most intriguing facts about our planet and sharing them with you.</p>
+        <section id="great-wall" class="topic great-wall">
+            <h2>The Great Wall of China</h2>
+            <p>The Great Wall of China is over 13,000 miles long and took more than 2,000 years to build.</p>
         </section>
 
-        <section id="facts">
-            <h2>Did You Know?</h2>
-
-            <div class="topic great-wall" id="great-wall">
-                <h3>The Great Wall of China</h3>
-                <p>The Great Wall of China is over 13,000 miles long and took more than 2,000 years to build.</p>
-            </div>
-
-            <div class="topic lake-baikal" id="lake-baikal">
-                <h3>Lake Baikal</h3>
-                <p>Lake Baikal in Siberia is the deepest lake in the world, reaching depths of over 5,300 feet.</p>
-            </div>
-
-            <div class="topic sahara-desert" id="sahara-desert">
-                <h3>The Sahara Desert</h3>
-                <p>The Sahara Desert expands at about 0.6 miles per year due to desertification.</p>
-            </div>
-
-            <div class="topic amazon-rainforest" id="amazon-rainforest">
-                <h3>Amazon Rainforest</h3>
-                <p>The Amazon Rainforest produces 20% of the Earth's oxygen and is home to one in ten known species in the world.</p>
-            </div>
-
-            <div class="topic mount-everest" id="mount-everest">
-                <h3>Mount Everest</h3>
-                <p>Mount Everest, the highest mountain in the world, stands at 29,029 feet above sea level.</p>
-            </div>
+        <section id="lake-baikal" class="topic lake-baikal">
+            <h2>Lake Baikal</h2>
+            <p>Lake Baikal in Siberia is the deepest lake in the world, reaching depths of over 5,300 feet.</p>
         </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <ul class="contact-info">
-                <li><i class="fas fa-envelope"></i><a href="mailto:rumsfelddonald1@gmail.com">rumsfelddonald1@gmail.com</a></li>
-                <li><i class="fas fa-phone"></i>+254796447965</li>
-                <li><i class="fab fa-twitter"></i><a href="https://twitter.com/FactsAroundGlob" target="_blank">@FactsAroundGlob</a></
+        <section id="sahara-desert" class="topic sahara-desert">
+            <h2>The Sahara Desert</h2>
+            <p>The Sahara Desert expands at about 0.6 miles per year due to desertification.</p>
+        </section>
+
+        <!-- Add more sections for other topics -->
+
+    </div>
+
+    <footer>
+        <p>Contact:</p>
+        <ul class="contact-info">
+            <li><i class="fas fa-phone"></i><a href="tel:+254796447965">+254796447965</a></li>
+            <li><i class="fab fa-twitter"></i><a href="https://twitter.com/FactsAroundGlob">@FactsAroundGlob</a></li>
+            <li><i class="far fa-envelope"></i><a href="mailto:rumsfelddonald1@gmail.com">rumsfelddonald1@gmail.com</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
