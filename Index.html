@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Facts Around the Globe</title>
+    <title>Facts Around Globe</title>
     <!-- Google Fonts: Roboto for headings and Open Sans for body text -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -19,10 +21,32 @@
         }
 
         header {
-            background-color: #333;
+            background: url('https://source.unsplash.com/1600x900/?globe,world') no-repeat center center/cover;
             color: #fff;
-            padding: 20px 0;
+            padding: 60px 0;
             text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         .container {
@@ -51,9 +75,46 @@
             margin: 10px 0;
         }
 
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
+        .topic {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            color: #fff;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .topic h3 {
+            margin: 0 0 10px;
+        }
+
+        .topic p {
+            margin: 0;
+        }
+
+        .topic.great-wall {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6f/The_Great_Wall_of_China_at_Jinshanling-edit.jpg');
+            background-color: #333;
+        }
+
+        .topic.lake-baikal {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/Lake_Baikal_Bourhan.jpg');
+            background-color: #003366;
+        }
+
+        .topic.sahara-desert {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c6/Desert_Caravan%2C_Timbuktu%2C_Mali.jpg');
+            background-color: #cc6600;
+        }
+
+        .topic.amazon-rainforest {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/94/Amazon_Rainforest.jpg');
+            background-color: #006600;
+        }
+
+        .topic.mount-everest {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg');
+            background-color: #1a75ff;
         }
 
         .contact-info {
@@ -63,6 +124,12 @@
 
         .contact-info li {
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
         }
 
         .contact-info a {
@@ -73,37 +140,86 @@
         .contact-info a:hover {
             text-decoration: underline;
         }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer i {
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Your Name</h1>
+        <h1>Facts Around Globe</h1>
         <p>Exploring Fascinating Facts Around the Globe</p>
     </header>
 
-    <div class="container">
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#facts">Facts</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container" id="about">
         <h2>About Me</h2>
         <p>Welcome to my world of exploration and discovery! I'm passionate about uncovering the most intriguing facts about our planet and sharing them with you.</p>
 
-        <h2>Did You Know?</h2>
-        <ul>
-            <li>Fact 1: The Great Wall of China is over 13,000 miles long and took more than 2,000 years to build.</li>
-            <li>Fact 2: Lake Baikal in Siberia is the deepest lake in the world, reaching depths of over 5,300 feet.</li>
-            <li>Fact 3: The Sahara Desert expands at about 0.6 miles per year due to desertification.</li>
-            <!-- Add more fascinating facts here -->
-        </ul>
+        <h2 id="facts">Did You Know?</h2>
 
-        <h2>Contact Me</h2>
+        <div class="topic great-wall">
+            <h3>The Great Wall of China</h3>
+            <p>The Great Wall of China is over 13,000 miles long and took more than 2,000 years to build.</p>
+        </div>
+
+        <div class="topic lake-baikal">
+            <h3>Lake Baikal</h3>
+            <p>Lake Baikal in Siberia is the deepest lake in the world, reaching depths of over 5,300 feet.</p>
+        </div>
+
+        <div class="topic sahara-desert">
+            <h3>The Sahara Desert</h3>
+            <p>The Sahara Desert expands at about 0.6 miles per year due to desertification.</p>
+        </div>
+
+        <div class="topic amazon-rainforest">
+            <h3>Amazon Rainforest</h3>
+            <p>The Amazon Rainforest produces 20% of the Earth's oxygen and is home to one in ten known species in the world.</p>
+        </div>
+
+        <div class="topic mount-everest">
+            <h3>Mount Everest</h3>
+            <p>Mount Everest, the highest mountain in the world, stands at 29,029 feet above sea level.</p>
+        </div>
+
+        <h2 id="contact">Contact Me</h2>
         <ul class="contact-info">
-            <li>Email: <a href="mailto:your.email@example.com">your.rumsfelddonald1@gmail.com</a></li>
-            <li>Phone: +123-456-7890</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a></li>
-            <li>Twitter: <a href="https://twitter.com/yourprofile" target="_blank">@FactsAroundGlob</a></li>
+            <li><i class="fas fa-envelope"></i><a href="mailto:rumsfelddonald1@gmail.com">rumsfelddonald1@gmail.com</a></li>
+            <li><i class="fas fa-phone"></i>+254796447965</li>
+            <li><i class="fab fa-twitter"></i><a href="https://twitter.com/FactsAroundGlob" target="_blank">@FactsAroundGlob</a></li>
         </ul>
     </div>
 
-</body>
-
-</html>
+    <footer>
+        <p>&copy; 2024 Facts Around Globe. All rights reserved.</p>
+        <p>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://
