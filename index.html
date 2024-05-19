@@ -92,6 +92,7 @@
             margin: 0;
         }
 
+        /* Define styles for each topic */
         .topic.great-wall {
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6f/The_Great_Wall_of_China_at_Jinshanling-edit.jpg');
             background-color: #333;
@@ -107,66 +108,9 @@
             background-color: #cc6600;
         }
 
-        .topic.amazon-rainforest {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/94/Amazon_Rainforest.jpg');
-            background-color: #006600;
-        }
+        /* Add more topic styles as needed */
 
-        .topic.mount-everest {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg');
-            background-color: #1a75ff;
-        }
-
-        .topic.victoria-falls {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/56/Victoria_Falls_2009.jpg');
-            background-color: #0066cc;
-        }
-
-        .topic.grand-canyon {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e2/Grand_Canyon_Dusk.jpg');
-            background-color: #993300;
-        }
-
-        .topic.niagara-falls {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8d/Niagara_Falls.jpg');
-            background-color: #0099cc;
-        }
-
-        .topic.machu-picchu {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Machu_Picchu%2C_Peru.jpg');
-            background-color: #669900;
-        }
-
-        .topic.eiffel-tower {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Eiffel_Tower_at_Night.jpg');
-            background-color: #666666;
-        }
-
-        .topic.loch-ness {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/Loch_Ness_Urquhart_Castle.jpg');
-            background-color: #003366;
-        }
-
-        .topic.great-barrier-reef {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/ae/Great_Barrier_Reef-EO.JPG');
-            background-color: #339999;
-        }
-
-        .topic.sydney-opera-house {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f0/Sydney_Opera_House_Sails.jpg');
-            background-color: #999966;
-        }
-
-        .topic.antarctic-ice-sheet {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6d/Antarctic_ice_sheet.jpg');
-            background-color: #0099cc;
-        }
-
-        .topic.emperor-penguins {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fd/Emperor_Penguins_Antarctica.jpg');
-            background-color: #333399;
-        }
-
+        /* Contact Info */
         .contact-info {
             list-style: none;
             padding: 0;
@@ -187,4 +131,56 @@
             text-decoration: none;
         }
 
-        .
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Facts Around Globe</h1>
+        <p>Discover fascinating facts about landmarks and natural wonders around the world</p>
+    </header>
+
+    <nav>
+        <a href="#great-wall">Great Wall of China</a>
+        <a href="#lake-baikal">Lake Baikal</a>
+        <a href="#sahara-desert">Sahara Desert</a>
+        <!-- Add more navigation links as needed -->
+    </nav>
+
+    <div class="container">
+
+        <section id="great-wall" class="topic great-wall">
+            <h2>The Great Wall of China</h2>
+            <p>The Great Wall of China is over 13,000 miles long and took more than 2,000 years to build.</p>
+        </section>
+
+        <section id="lake-baikal" class="topic lake-baikal">
+            <h2>Lake Baikal</h2>
+            <p>Lake Baikal in Siberia is the deepest lake in the world, reaching depths of over 5,300 feet.</p>
+        </section>
+
+        <section id="sahara-desert" class="topic sahara-desert">
+            <h2>The Sahara Desert</h2>
+            <p>The Sahara Desert expands at about 0.6 miles per year due to desertification.</p>
+        </section>
+
+        <!-- Add more sections for other topics -->
+
+    </div>
+
+    <footer>
+        <p>Contact:</p>
+        <ul class="contact-info">
+            <li><i class="fas fa-phone"></i><a href="tel:+254796447965">+254796447965</a></li>
+            <li><i class="fab fa-twitter"></i><a href="https://twitter.com/FactsAroundGlob">@FactsAroundGlob</a></li>
+            <li><i class="far fa-envelope"></i><a href="mailto:rumsfelddonald1@gmail.com">rumsfelddonald1@gmail.com</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
